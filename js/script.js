@@ -22,12 +22,30 @@ var services = [
 var caseTags = ['Zero sales', 'コンサルティング', '従業員50人', '計画設計コンサルティング'];
 
 var menuData = [
-  { title: '会社情報', sub: ['会社概要', '行動指針・経営方針', '代表挨拶', 'メンバー'] },
-  { title: 'サービス', sub: ['ZERO SALES', 'ZERO MARKETING', 'ZERO PROMOTION', 'ZERO UNIT'] },
-  { title: '導入事例' },
-  { title: 'お知らせ' },
-  { title: '採用情報' },
-  { title: 'お問い合わせ' }
+  {
+    title: '会社情報',
+    href: '#about',
+    sub: [
+      { title: '会社概要', href: '#about' },
+      { title: '行動指針・経営方針', href: '#about' },
+      { title: '代表挨拶', href: '#about' },
+      { title: 'メンバー', href: '#member' }
+    ]
+  },
+  {
+    title: 'サービス',
+    href: '#service',
+    sub: [
+      { title: 'ZERO SALES', href: '#service' },
+      { title: 'ZERO MARKETING', href: '#service' },
+      { title: 'ZERO PROMOTION', href: '#service' },
+      { title: 'ZERO UNIT', href: '#service' }
+    ]
+  },
+  { title: '導入事例', href: '#case' },
+  { title: 'お知らせ', href: '#news' },
+  { title: '採用情報', href: '#recruit' },
+  { title: 'お問い合わせ', href: '#contact' }
 ];
 
 function buildMenuLink(item) {
@@ -35,13 +53,13 @@ function buildMenuLink(item) {
   if (item.title === '採用情報') { linkClass = ' class="acc__link--recruit"'; }
   if (item.title === 'お問い合わせ') { linkClass = ' class="acc__link--contact"'; }
 
-  return `<li><a href="#"${linkClass}>${item.title}<span>＞</span></a></li>`;
+  return `<li><a href="${item.href}"${linkClass}>${item.title}<span>＞</span></a></li>`;
 }
 
 function buildMenuGroup(item) {
   var subItems = item.sub
     .map(function (sub) {
-      return `<li><a href="#">${sub}<span>＞</span></a></li>`;
+      return `<li><a href="${sub.href}">${sub.title}<span>＞</span></a></li>`;
     })
     .join('');
 
@@ -99,6 +117,13 @@ function initMenu() {
   burger.addEventListener('click', function () {
     burger.classList.toggle('is-open');
     spMenu.classList.toggle('is-open');
+  });
+
+  spMenu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      burger.classList.remove('is-open');
+      spMenu.classList.remove('is-open');
+    }
   });
 }
 
