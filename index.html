@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF GROUP | 経営プロセスに革新を</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">
+      <img class="logo__img" src="images/logo.png" alt="Uラボ">
+    </a>
+
+    <button class="burger" id="burger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#about">会社紹介</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#case">導入事例</a></li>
+        <li><a href="#news">お知らせ</a></li>
+      </ul>
+      <a href="#recruit" class="nav__btn">採用情報</a>
+      <a href="#contact" class="nav__btn">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <div class="sp-menu" id="spMenu"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero__mesh" id="heroMesh"></div>
+      <div class="hero__text">
+        <p class="hero__en">Management Innovation</p>
+        <h1 class="hero__title">経営プロセスに<span>革新を</span></h1>
+      </div>
+      <div class="hero__diamonds">
+        <div class="diamond diamond--1"><div class="diamond__img"></div></div>
+        <div class="diamond diamond--2"><div class="diamond__img"></div></div>
+        <div class="diamond diamond--3"><div class="diamond__img"></div></div>
+      </div>
+    </section>
+
+    <div class="logos">
+      <ul class="logos__track" id="logosTrack">
+        <li>ロゴ</li><li>ロゴ</li><li>ロゴ</li><li>ロゴ</li><li>ロゴ</li><li>ロゴ</li>
+      </ul>
+    </div>
+
+    <section class="about" id="about">
+      <div class="deco deco--gray">
+        <i class="dia dia--a"></i><i class="dia dia--b"></i><i class="dia dia--c"></i><i class="dia dia--d"></i>
+      </div>
+      <div class="about__inner">
+        <p class="about__side">Create the Future<br><span>未来を創造する</span></p>
+        <div class="about__body">
+          <h2 class="about__title">CTFGROUPは<br>「創造で＿＿をデザインする.」</h2>
+          <p>＿＿＿＿には従業員・お客様・関わる全ての皆さまでそれぞれの信念・成し遂げたい事が入ります。</p>
+          <p>私たちUラボはそれぞれの＿＿＿＿を事業を通じてデザインしていくことが、私たちの経営理念になります。</p>
+          <p>Discomfort with common sense<br>〜小さな気づきから常識に違和感を〜</p>
+          <p>私たちは経営理念を実現するため、目指すべき指標として、このミッションを掲げています。</p>
+          <p>常に常識に違和感を持ち続けなければ創造で＿＿＿＿をデザインする事はできません。</p>
+          <p>1歩1歩着実に成長し、様々なステークホルダーに貢献し、未来を創造する会社を必ず創っていきます。</p>
+          <a href="#" class="more">View More <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="deco deco--gold">
+        <i class="dia dia--a"></i><i class="dia dia--b"></i><i class="dia dia--c"></i>
+      </div>
+      <h2 class="heading heading--yellow"><small>事業内容</small>Service</h2>
+      <p class="service__lead service__lead--pc">
+        CTFGROUPは総合マーケティング支援事業を通して、企業様のニーズに合わせた最適なご提案をさせていただいております。<br>
+        「新規開拓をしたいけどノウハウがない。人的リソースが足りない。」<br>
+        「営業チームのパフォーマンスを上げたい。」<br>
+        CTFGROUPはそんなお悩みを持つ企業様に特化した支援を行っています。
+      </p>
+      <p class="service__lead service__lead--sp">
+        「人的リソースが足りない。しかし採用活動が上手く進まない...。」<br>
+        株式会社CTF GROUPは、そんな中小零細企業に特化した新しい総合マーケティング支援を行っています。<br>
+        新規顧客の開拓、販路拡大、代理店の開拓などの様々なニーズに対し、インバウンド・アウトバウンド施策両方を網羅している弊社だからこそ、最適なご提案が可能です。
+      </p>
+      <div class="service__list" id="serviceList"></div>
+    </section>
+
+    <section class="case" id="case">
+      <h2 class="heading heading--yellow"><small>導入事例</small>Case Study</h2>
+      <div class="case__list" id="caseList"></div>
+      <a href="#" class="more">View More <span>→</span></a>
+    </section>
+
+    <section class="member" id="member">
+      <h2 class="heading heading--light"><small>メンバー</small>Member</h2>
+      <div class="slider">
+        <button class="slider__arrow slider__arrow--prev" id="prev" aria-label="前へ"></button>
+        <div class="slider__window">
+          <div class="slider__track" id="memberTrack"></div>
+        </div>
+        <button class="slider__arrow slider__arrow--next" id="next" aria-label="次へ"></button>
+      </div>
+      <a href="#" class="more more--light">View More <span>→</span></a>
+    </section>
+
+    <section class="news" id="news">
+      <h2 class="heading"><small>お知らせ</small>NEWS</h2>
+      <ul class="news__list" id="newsList"></ul>
+      <a href="#" class="more">View More <span>→</span></a>
+    </section>
+
+    <section class="banners">
+      <a href="#" class="banner banner--recruit" id="recruit">
+        <small>採用情報</small>
+        <h2>Recruit</h2>
+      </a>
+      <a href="#" class="banner banner--contact" id="contact">
+        <small>お問い合わせ</small>
+        <h2>Contact</h2>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="#" class="logo logo--footer">
+        <img class="logo__img" src="images/logo.png" alt="Uラボ">
+      </a>
+      <div class="footer__menu">
+        <ul>
+          <li class="footer__title"><a href="#service">サービス</a></li>
+          <li><a href="#">メニュー</a></li>
+          <li><a href="#">メニュー</a></li>
+          <li><a href="#">メニュー</a></li>
+          <li><a href="#">メニュー</a></li>
+        </ul>
+        <ul>
+          <li class="footer__title"><a href="#about">会社情報</a></li>
+          <li><a href="#">会社概要</a></li>
+          <li><a href="#">行動指針・経営方針</a></li>
+          <li><a href="#">代表挨拶</a></li>
+          <li><a href="#member">メンバー</a></li>
+        </ul>
+        <ul>
+          <li class="footer__title"><a href="#case">事例</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#recruit">採用情報</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© copyright 2024 Uラボ FE LLC</p>
+
+    <div class="footer-sp" id="footerSp">
+      <a href="#" class="logo logo--footer-sp">
+        <img class="logo__img" src="images/logo.png" alt="Uラボ">
+      </a>
+      <p class="footer-sp__copy">© copyright 2024 CTF group</p>
+    </div>
+  </footer>
+
+  <script src="js/images.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
